@@ -24,15 +24,15 @@ const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRo
 const EMAIL = "cherrygraphics2026@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
-// Image URLs from Cloudinary
+// Image URLs - Using Google Drive direct preview links from your portfolio
 const IMAGES = {
   founder: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/cherry-graphics-founder-photo_bzwbru",
-  // Portfolio images - Replace with your actual Cloudinary URLs
-  banner1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto,w_800,h_600,c_fill/v1719404587/icon_star_banner_1_gtyhsf",
-  banner2: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-  banner3: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-  poster1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=750&fit=crop",
-  poster2: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=750&fit=crop",
+  // Google Drive preview links - converted from share links to direct preview
+  banner1: "https://drive.google.com/thumbnail?id=1Z5JHTGkXrllL9eywt2CLzfITzwvwmAKL&sz=w800",
+  banner2: "https://drive.google.com/thumbnail?id=1Nrd4h3f30fh9EZpApMQXLDPpT5gSORbH&sz=w800",
+  banner3: "https://drive.google.com/thumbnail?id=1UeNx_xZ092IeNvC4Df8LkvmrdKDGx5Lj&sz=w800",
+  poster1: "https://drive.google.com/thumbnail?id=106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO&sz=w600",
+  poster2: "https://drive.google.com/thumbnail?id=1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB&sz=w600",
   social1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
   invite1: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=500&fit=crop",
   video1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
