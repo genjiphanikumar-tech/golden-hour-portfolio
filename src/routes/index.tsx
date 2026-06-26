@@ -24,17 +24,17 @@ const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRo
 const EMAIL = "cherrygraphics2026@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
-// Image URLs - Replace these with your actual CDN URLs or GitHub raw URLs
+// Image URLs from Cloudinary
 const IMAGES = {
-  founder: "https://i.imgur.com/placeholder-founder.jpg", // Replace with your actual image URL
-  banner1: "https://i.imgur.com/placeholder-banner1.jpg",
-  banner2: "https://i.imgur.com/placeholder-banner2.jpg",
-  banner3: "https://i.imgur.com/placeholder-banner3.jpg",
-  poster1: "https://i.imgur.com/placeholder-poster1.jpg",
-  poster2: "https://i.imgur.com/placeholder-poster2.jpg",
-  social1: "https://i.imgur.com/placeholder-social1.jpg",
-  invite1: "https://i.imgur.com/placeholder-invite1.jpg",
-  video1: "https://i.imgur.com/placeholder-video1.jpg",
+  founder: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/cherry-graphics-founder-photo_bzwbru",
+  banner1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner1_placeholder",
+  banner2: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner2_placeholder",
+  banner3: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner3_placeholder",
+  poster1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/poster1_placeholder",
+  poster2: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/poster2_placeholder",
+  social1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/social1_placeholder",
+  invite1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/invite1_placeholder",
+  video1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/video1_placeholder",
 };
 
 function Home() {
