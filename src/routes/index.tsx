@@ -24,11 +24,11 @@ const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRo
 const EMAIL = "cherrygraphics2026@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
-// Image URLs from Cloudinary - Update these with your actual portfolio images
+// Image URLs from Cloudinary
 const IMAGES = {
   founder: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/cherry-graphics-founder-photo_bzwbru",
-  // Portfolio images - using placeholder service for now, replace with your Cloudinary URLs
-  banner1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+  // Portfolio images - Replace with your actual Cloudinary URLs
+  banner1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto,w_800,h_600,c_fill/v1719404587/icon_star_banner_1_gtyhsf",
   banner2: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
   banner3: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
   poster1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=750&fit=crop",
