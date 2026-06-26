@@ -6,15 +6,6 @@ import {
   Image as ImageIcon, Film, Megaphone, Instagram, Mail, Phone, MessageCircle,
   Sparkles, ArrowRight, Star, Quote,
 } from "lucide-react";
-import founderAsset from "@/assets/founder.jpg.asset.json";
-import banner1 from "@/assets/portfolio/banner1.jpg.asset.json";
-import banner2 from "@/assets/portfolio/banner2.jpg.asset.json";
-import banner3 from "@/assets/portfolio/banner3.jpg.asset.json";
-import poster1 from "@/assets/portfolio/poster1.jpg.asset.json";
-import poster2 from "@/assets/portfolio/poster2.jpg.asset.json";
-import social1 from "@/assets/portfolio/social1.jpg.asset.json";
-import invite1 from "@/assets/portfolio/invite1.jpg.asset.json";
-import video1 from "@/assets/portfolio/video1.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,6 +23,19 @@ const WHATSAPP_LINK = "https://wa.me/919542203277";
 const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRodHVodDB3";
 const EMAIL = "cherrygraphics2026@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
+
+// Image URLs - Replace these with your actual CDN URLs or GitHub raw URLs
+const IMAGES = {
+  founder: "https://i.imgur.com/placeholder-founder.jpg", // Replace with your actual image URL
+  banner1: "https://i.imgur.com/placeholder-banner1.jpg",
+  banner2: "https://i.imgur.com/placeholder-banner2.jpg",
+  banner3: "https://i.imgur.com/placeholder-banner3.jpg",
+  poster1: "https://i.imgur.com/placeholder-poster1.jpg",
+  poster2: "https://i.imgur.com/placeholder-poster2.jpg",
+  social1: "https://i.imgur.com/placeholder-social1.jpg",
+  invite1: "https://i.imgur.com/placeholder-invite1.jpg",
+  video1: "https://i.imgur.com/placeholder-video1.jpg",
+};
 
 function Home() {
   return (
@@ -66,7 +70,7 @@ function Nav() {
             <a key={l} href={`#${l.toLowerCase()}`} className="transition-colors hover:text-[var(--gold)]">{l}</a>
           ))}
         </nav>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-[var(--background)] shadow-[var(--shadow-gold-sm)] transition-transform hover:scale-105">
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-[var(--background)] shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
           Hire me
         </a>
       </div>
@@ -132,7 +136,7 @@ function Hero() {
             transition={{ duration: 0.9, delay: 0.4 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <a href="#work" className="group inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-[var(--background)] shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.03]">
+            <a href="#work" className="group inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-[var(--background)] shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
               View Portfolio
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
@@ -173,9 +177,10 @@ function Hero() {
           <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gold-gradient opacity-60 blur-[2px]" />
           <div className="relative overflow-hidden rounded-[1.8rem] border border-[oklch(0.78_0.12_85/0.35)] bg-card shadow-[var(--shadow-deep)]">
             <img
-              src={founderAsset.url}
+              src={IMAGES.founder}
               alt="G. Sai Charan — Founder, Cherry Graphics"
               className="block h-full w-full object-cover"
+              loading="eager"
             />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,oklch(0.1_0_0/0.7))]" />
             <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
@@ -336,7 +341,7 @@ function Services() {
               transition={{ duration: 0.6, delay: i * 0.07 }}
               className="group relative rounded-3xl glass p-7 transition-all hover:-translate-y-1 hover:border-[oklch(0.78_0.12_85/0.5)] hover:shadow-[var(--shadow-gold)]"
             >
-              <div className="absolute inset-0 -z-10 rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "radial-gradient(400px circle at 50% 0%, oklch(0.78 0.13 80 / 0.18), transparent 60%)" }} />
+              <div className="absolute inset-0 -z-10 rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "radial-gradient(400px circle at 50% 0%, oklch(0.78 0.13 80 / 0.15), transparent 80%)" }} />
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gold-gradient text-[var(--background)] shadow-[var(--shadow-gold-sm)]">
                 <s.Icon className="h-6 w-6" strokeWidth={1.8} />
               </div>
@@ -358,14 +363,14 @@ function Portfolio() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   const items = [
-    { title: "Signature Banner I", tag: "Banner", img: banner1.url, href: "https://drive.google.com/file/d/1Z5JHTGkXrllL9eywt2CLzfITzwvwmAKL/view" },
-    { title: "Signature Banner II", tag: "Banner", img: banner2.url, href: "https://drive.google.com/file/d/1Nrd4h3f30fh9EZpApMQXLDPpT5gSORbH/view" },
-    { title: "Signature Banner III", tag: "Banner", img: banner3.url, href: "https://drive.google.com/file/d/1UeNx_xZ092IeNvC4Df8LkvmrdKDGx5Lj/view" },
-    { title: "Editorial Poster I", tag: "Poster", img: poster1.url, href: "https://drive.google.com/file/d/106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO/view" },
-    { title: "Editorial Poster II", tag: "Poster", img: poster2.url, href: "https://drive.google.com/file/d/1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB/view" },
-    { title: "Social Story", tag: "Social", img: social1.url, href: INSTAGRAM_LINK },
-    { title: "Maison Invitation", tag: "Invitation", img: invite1.url, href: INSTAGRAM_LINK },
-    { title: "Velvet Reel", tag: "Video", img: video1.url, href: INSTAGRAM_LINK },
+    { title: "Signature Banner I", tag: "Banner", img: IMAGES.banner1, href: "https://drive.google.com/file/d/1Z5JHTGkXrllL9eywt2CLzfITzwvwmAKL/view" },
+    { title: "Signature Banner II", tag: "Banner", img: IMAGES.banner2, href: "https://drive.google.com/file/d/1Nrd4h3f30fh9EZpApMQXLDPpT5gSORbH/view" },
+    { title: "Signature Banner III", tag: "Banner", img: IMAGES.banner3, href: "https://drive.google.com/file/d/1UeNx_xZ092IeNvC4Df8LkvmrdKDGx5Lj/view" },
+    { title: "Editorial Poster I", tag: "Poster", img: IMAGES.poster1, href: "https://drive.google.com/file/d/106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO/view" },
+    { title: "Editorial Poster II", tag: "Poster", img: IMAGES.poster2, href: "https://drive.google.com/file/d/1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB/view" },
+    { title: "Social Story", tag: "Social", img: IMAGES.social1, href: INSTAGRAM_LINK },
+    { title: "Maison Invitation", tag: "Invitation", img: IMAGES.invite1, href: INSTAGRAM_LINK },
+    { title: "Velvet Reel", tag: "Video", img: IMAGES.video1, href: INSTAGRAM_LINK },
   ];
 
   return (
