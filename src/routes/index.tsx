@@ -358,35 +358,39 @@ function Portfolio() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   const items = [
-    { title: "Aurora Campaign", tag: "Poster", grad: "from-[oklch(0.4_0.12_50)] to-[oklch(0.2_0.05_60)]" },
-    { title: "Saffron Launch", tag: "Social", grad: "from-[oklch(0.55_0.16_70)] to-[oklch(0.25_0.08_60)]" },
-    { title: "Maison Invitations", tag: "Invitation", grad: "from-[oklch(0.5_0.1_80)] to-[oklch(0.18_0.04_70)]" },
-    { title: "Velvet Reel", tag: "Video", grad: "from-[oklch(0.3_0.06_60)] to-[oklch(0.15_0.03_60)]" },
-    { title: "Atelier Banner", tag: "Banner", grad: "from-[oklch(0.45_0.14_75)] to-[oklch(0.2_0.05_60)]" },
-    { title: "Noir Series", tag: "Poster", grad: "from-[oklch(0.25_0.06_70)] to-[oklch(0.1_0.02_60)]" },
+    { title: "Signature Banner I", tag: "Banner", img: banner1.url, href: "https://drive.google.com/file/d/1Z5JHTGkXrllL9eywt2CLzfITzwvwmAKL/view" },
+    { title: "Signature Banner II", tag: "Banner", img: banner2.url, href: "https://drive.google.com/file/d/1Nrd4h3f30fh9EZpApMQXLDPpT5gSORbH/view" },
+    { title: "Signature Banner III", tag: "Banner", img: banner3.url, href: "https://drive.google.com/file/d/1UeNx_xZ092IeNvC4Df8LkvmrdKDGx5Lj/view" },
+    { title: "Editorial Poster I", tag: "Poster", img: poster1.url, href: "https://drive.google.com/file/d/106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO/view" },
+    { title: "Editorial Poster II", tag: "Poster", img: poster2.url, href: "https://drive.google.com/file/d/1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB/view" },
+    { title: "Social Story", tag: "Social", img: social1.url, href: INSTAGRAM_LINK },
+    { title: "Maison Invitation", tag: "Invitation", img: invite1.url, href: INSTAGRAM_LINK },
+    { title: "Velvet Reel", tag: "Video", img: video1.url, href: INSTAGRAM_LINK },
   ];
 
   return (
     <section id="work" className="relative px-4 py-28 sm:px-8">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Selected Work" title="Portfolio." sub="A curated cut. Full case studies on request." />
+        <SectionHeading kicker="Selected Work" title="Portfolio." sub="A curated cut. Tap any piece to view the full design." />
         <motion.div style={{ y }} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <motion.a
-              href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer"
+              href={it.href} target="_blank" rel="noopener noreferrer"
               key={it.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
-              className={`group relative aspect-[4/5] overflow-hidden rounded-3xl border border-[var(--border)] bg-gradient-to-br ${it.grad}`}
+              className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-[var(--border)] bg-[oklch(0.15_0.02_60)]"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,oklch(0.95_0.07_90/0.25),transparent_60%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_50%,oklch(0.1_0_0/0.8))]" />
-              {/* faux design panels */}
-              <div className="absolute left-6 top-6 h-1 w-12 rounded bg-gold-gradient" />
-              <div className="absolute left-6 top-10 h-1 w-8 rounded bg-[oklch(1_0_0/0.4)]" />
-              <div className="absolute right-6 top-6 rounded-full glass px-2 py-1 text-[10px] uppercase tracking-widest text-[var(--gold)]">{it.tag}</div>
+              <img
+                src={it.img}
+                alt={it.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,oklch(0.1_0_0/0.85))]" />
+              <div className="absolute right-4 top-4 rounded-full glass px-2 py-1 text-[10px] uppercase tracking-widest text-[var(--gold)]">{it.tag}</div>
               <div className="absolute inset-x-6 bottom-6 flex items-end justify-between">
                 <div>
                   <div className="font-display text-2xl text-white">{it.title}</div>
