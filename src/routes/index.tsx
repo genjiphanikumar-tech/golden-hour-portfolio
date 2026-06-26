@@ -24,17 +24,18 @@ const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRo
 const EMAIL = "cherrygraphics2026@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
-// Image URLs from Cloudinary
+// Image URLs from Cloudinary - Update these with your actual portfolio images
 const IMAGES = {
   founder: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/cherry-graphics-founder-photo_bzwbru",
-  banner1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner1_placeholder",
-  banner2: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner2_placeholder",
-  banner3: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/banner3_placeholder",
-  poster1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/poster1_placeholder",
-  poster2: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/poster2_placeholder",
-  social1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/social1_placeholder",
-  invite1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/invite1_placeholder",
-  video1: "https://res.cloudinary.com/dlnpc1bma/image/upload/f_auto,q_auto/video1_placeholder",
+  // Portfolio images - using placeholder service for now, replace with your Cloudinary URLs
+  banner1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+  banner2: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+  banner3: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+  poster1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=750&fit=crop",
+  poster2: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=750&fit=crop",
+  social1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
+  invite1: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=500&fit=crop",
+  video1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
 };
 
 function Home() {
