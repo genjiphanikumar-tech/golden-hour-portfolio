@@ -7,6 +7,14 @@ import {
   Sparkles, ArrowRight, Star, Quote,
 } from "lucide-react";
 import founderAsset from "@/assets/founder.jpg.asset.json";
+import banner1 from "@/assets/portfolio/banner1.jpg.asset.json";
+import banner2 from "@/assets/portfolio/banner2.jpg.asset.json";
+import banner3 from "@/assets/portfolio/banner3.jpg.asset.json";
+import poster1 from "@/assets/portfolio/poster1.jpg.asset.json";
+import poster2 from "@/assets/portfolio/poster2.jpg.asset.json";
+import social1 from "@/assets/portfolio/social1.jpg.asset.json";
+import invite1 from "@/assets/portfolio/invite1.jpg.asset.json";
+import video1 from "@/assets/portfolio/video1.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
