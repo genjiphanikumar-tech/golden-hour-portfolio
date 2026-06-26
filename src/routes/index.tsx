@@ -20,8 +20,10 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const WHATSAPP_LINK = "#";
-const INSTAGRAM_LINK = "#";
+const WHATSAPP_LINK = "https://wa.me/919542203277";
+const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRodHVodDB3";
+const EMAIL = "cherrygraphics2026@gmail.com";
+const EMAIL_LINK = `mailto:${EMAIL}`;
 
 function Home() {
   return (
