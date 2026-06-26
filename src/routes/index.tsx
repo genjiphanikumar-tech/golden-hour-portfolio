@@ -58,7 +58,7 @@ function Nav() {
             <a key={l} href={`#${l.toLowerCase()}`} className="transition-colors hover:text-[var(--gold)]">{l}</a>
           ))}
         </nav>
-        <a href={WHATSAPP_LINK} className="rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-[var(--background)] shadow-[var(--shadow-gold-sm)] transition-transform hover:scale-105">
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gold-gradient px-4 py-2 text-xs font-semibold text-[var(--background)] shadow-[var(--shadow-gold-sm)] transition-transform hover:scale-105">
           Hire me
         </a>
       </div>
@@ -365,7 +365,7 @@ function Portfolio() {
         <motion.div style={{ y }} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <motion.a
-              href={INSTAGRAM_LINK}
+              href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer"
               key={it.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -463,20 +463,20 @@ function Contact() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-[var(--background)] shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-semibold text-[var(--background)] shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
-            <a href={INSTAGRAM_LINK} className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
+            <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
               <Instagram className="h-4 w-4" /> Instagram
             </a>
-            <a href="mailto:hello@cherrygraphics.studio" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
+            <a href={EMAIL_LINK} className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
               <Mail className="h-4 w-4" /> Email
             </a>
           </div>
 
           <div className="mt-10 grid gap-4 border-t border-[var(--border)] pt-8 text-sm text-muted-foreground sm:grid-cols-3">
             <div className="flex items-center justify-center gap-2"><Phone className="h-4 w-4 text-[var(--gold)]" /> On request</div>
-            <div className="flex items-center justify-center gap-2"><Mail className="h-4 w-4 text-[var(--gold)]" /> hello@cherrygraphics.studio</div>
+            <div className="flex items-center justify-center gap-2"><Mail className="h-4 w-4 text-[var(--gold)]" /> cherrygraphics2026@gmail.com</div>
             <div className="flex items-center justify-center gap-2"><Sparkles className="h-4 w-4 text-[var(--gold)]" /> Worldwide remote</div>
           </div>
         </motion.div>
