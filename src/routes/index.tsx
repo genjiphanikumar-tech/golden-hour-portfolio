@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { toast } from "sonner";
 import {
   PenTool, Palette, Camera, Crop, Wand2, Layers,
   Image as ImageIcon, Film, Megaphone, Instagram, Mail, Phone, MessageCircle,
@@ -23,7 +22,7 @@ export const Route = createFileRoute("/")({
 const WHATSAPP_LINK = "https://wa.me/919542203277";
 const INSTAGRAM_LINK = "https://www.instagram.com/cherry_graphicss?igsh=cHBrYXRodHVodDB3";
 const EMAIL = "cherrygraphics2026@gmail.com";
-const EMAIL_LINK = `mailto:${EMAIL}`;
+const GMAIL_COMPOSE_LINK = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`;
 
 // Image URLs - Using Google Drive direct preview links from your portfolio
 const IMAGES = {
@@ -488,17 +487,14 @@ function Contact() {
             <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
               <Instagram className="h-4 w-4" /> Instagram
             </a>
-            <button
-              type="button"
-              onClick={() => {
-                navigator.clipboard?.writeText(EMAIL).catch(() => {});
-                toast.success("Email copied", { description: EMAIL });
-                window.location.href = EMAIL_LINK;
-              }}
+            <a
+              href={GMAIL_COMPOSE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]"
             >
               <Mail className="h-4 w-4" /> Email
-            </button>
+            </a>
           </div>
 
           <div className="mt-10 grid gap-4 border-t border-[var(--border)] pt-8 text-sm text-muted-foreground sm:grid-cols-3">
