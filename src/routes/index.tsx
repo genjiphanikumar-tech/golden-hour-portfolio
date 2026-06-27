@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 import {
   PenTool, Palette, Camera, Crop, Wand2, Layers,
   Image as ImageIcon, Film, Megaphone, Instagram, Mail, Phone, MessageCircle,
@@ -487,9 +488,17 @@ function Contact() {
             <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
               <Instagram className="h-4 w-4" /> Instagram
             </a>
-            <a href={EMAIL_LINK} className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]">
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard?.writeText(EMAIL).catch(() => {});
+                toast.success("Email copied", { description: EMAIL });
+                window.location.href = EMAIL_LINK;
+              }}
+              className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold transition-colors hover:text-[var(--gold)]"
+            >
               <Mail className="h-4 w-4" /> Email
-            </a>
+            </button>
           </div>
 
           <div className="mt-10 grid gap-4 border-t border-[var(--border)] pt-8 text-sm text-muted-foreground sm:grid-cols-3">
