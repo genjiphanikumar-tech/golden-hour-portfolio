@@ -34,7 +34,7 @@ const IMAGES = {
   poster1: "https://drive.google.com/thumbnail?id=106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO&sz=w600",
   poster2: "https://drive.google.com/thumbnail?id=1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB&sz=w600",
   social1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
-  invite1: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=500&fit=crop",
+  invite1: "/images/maison-invitation.jpg",
   video1: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop",
 };
 
@@ -370,7 +370,7 @@ function Portfolio() {
     { title: "Editorial Poster I", tag: "Poster", img: IMAGES.poster1, href: "https://drive.google.com/file/d/106Mx1SyHJnceqfVlQEM_4DBalOxIIrlO/view" },
     { title: "Editorial Poster II", tag: "Poster", img: IMAGES.poster2, href: "https://drive.google.com/file/d/1fqFd4VxoIYh7ugSlHei5O4ZL_ZuRlhVB/view" },
     { title: "Social Story", tag: "Social", img: IMAGES.social1, href: INSTAGRAM_LINK },
-    { title: "Maison Invitation", tag: "Invitation", img: IMAGES.invite1, href: INSTAGRAM_LINK },
+    { title: "Maison Invitation", tag: "Invitation", img: IMAGES.invite1, href: IMAGES.invite1 },
     { title: "Velvet Reel", tag: "Video", img: IMAGES.video1, href: INSTAGRAM_LINK },
   ];
 
